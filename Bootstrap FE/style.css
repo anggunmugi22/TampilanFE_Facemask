@@ -1,0 +1,107 @@
+/* css for index.html */
+#cps{
+    height: 60px;
+    width: 200px;
+}
+
+.jumbotron{
+    background-image: url(image/mask4.jpeg);
+    background-size: cover;
+    height: 550px;
+    margin-top: 80px;
+    padding: 0rem 0rem;
+    margin-bottom: 0rem;
+    background-color: #e9ecef;
+    border-radius: .0rem;
+}
+
+.jumbotron .container {
+    padding-top: 2cm;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.jumbotron .display-4{
+    color: white;
+}
+
+.jumbotron .my-4{
+    color: white;
+}
+
+.jumbotron #pengenalan {
+    color: white;
+}
+
+.page-footer{
+    background-color: #bb1f25;
+    padding-top: 100px;
+	height: auto;
+}
+
+.page-footer .col-md-6{
+    color: white;
+    font-size: 17px;
+}
+
+.page-footer .col-md-3{
+    color: white;
+}
+
+.page-footer .footer-copyright{
+    text-align: center;
+    align-content: center;
+    background-color: #a00000;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    height: 50px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+
+/* css for image.html */
+.containform{
+    background-image: url(image/mask4.jpeg);
+    background-size: cover;
+    height: 800px;
+    padding-top: 2cm;
+    
+}
+
+.form1 {
+    background-color: #bb1f25;
+    opacity: 80%;
+    margin-top: 120px;
+    display:block;
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    border: 2px solid red; 
+    border-radius: 10px;
+    margin-left: 32%;
+    font-family: Comic sans MS;
+    color: white;
+    font-size: 15px;
+}
+
+.form1 .md-form .file-field{
+    font-size: 25px;
+}
+
+/* css for video.html */
+.containervideo{
+    background-image: url(image/mask4.jpeg);
+    display: block;
+    text-align: center;
+    padding-top: 2cm;
+    padding-bottom: 1cm;
+    height: auto;
+    width: auto;
+}
+
+#h3{
+    color: yellow;
+    text-align: center;
+}

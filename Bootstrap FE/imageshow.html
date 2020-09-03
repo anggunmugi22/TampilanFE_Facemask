@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="js/jquery-3.2.1.js"></script>-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="style.css">
+   
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+    <title>CPS Research Gate</title>
+  </head>
+   
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+      <div class="container">
+      <img id="cps" src="image/cps.png" alt="">
+      <!--<a class="navbar-brand" style="text-align: center;" href="#">Research Group</a>-->
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Network
+            </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">What is IoT</a>
+              <a class="dropdown-item" href="#">Kind of IoT</a>
+          </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#">Data Science</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Web
+            </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Front End</a>
+              <a class="dropdown-item" href="#">Back End</a>
+          </div>
+          </li>
+        </ul>
+      </div>
+      </div>
+  </nav>
+  {% extends "index.html" %}
+  {% block image %}
+
+  {% extends "index.html" %}
+    {% block image %}
+    <div class="containform">
+    <div class="form1">
+        <!--<form action={{ url_for('showimage') }} method="POST" enctype="multipart/form-data">
+            <h2><label style="text-align:center;">UPLOAD FILE</label><h2>
+                <hr style="size:20px; width:50%;align:left;border-color:white">
+            <label style="font-size: 25px">Browse:</label>
+            <input type="file" id="myfile" name="myfile" accept="image/*">
+            <a class="btn btn-primary btn-lg" href="videoikhwan.html" role="button">Predict</a>
+        </form>-->
+        <form class="md-form">
+            <h3><label style="text-align:center;">IMAGE SHOW</label></h3>
+            <hr style="size:20px; width:50%;align:left;border-color:white">
+            <div class="file-field">
+              <div class="btn btn-primary btn-sm">
+					
+					<input type="file" accept="image/*" onchange="loadFile(event)">
+					<br><br><br>
+					<img id="output" style="width:300px;height: 300px;"/>
+					<script>
+						var loadFile = function(event) {
+							var output = document.getElementById('output');
+							output.src = URL.createObjectURL(event.target.files[0]);
+							output.onload = function() {
+								URL.revokeObjectURL(output.src) // free memory
+							}
+						};
+					</script>
+                </span>
+            </div>
+              
+            </div>
+            
+            <br><a class="btn btn-primary btn-lg" href="/image" role="button">Upload Another Image Click Here</a>
+          </form>
+    </div>
+
+    <div style = "margin-left: 20%">
+      <img src={{ url_for('img_feed') }}  alt="Image">
+      </div>
+    <!-- endblock-->
+    {% endblock%}
+  </div>
+
+  <footer class="page-footer font-small blue pt-4">
+    <!-- Footer Links -->
+    <div class="container">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <h4>Developed by CPS Research Team</h4>
+            <br>
+          <p>First Project for Research Team in 2020</p>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Links -->
+          <h4 id="toggle-right">Contact Us</h4>
+  
+          <ul class="list-unstyled">
+            <li>
+              <img style="width:50px;height: 50px;" src="image/ig.png" alt="">
+              <a href="#">Instagram</a>
+            </li>
+            <li>
+              <img style="width:50px;height: 50px;" src="image/mail.png" alt="">
+              <a href="#">Email</a>
+            </li>
+            <li>
+              <img style="width:50px;height: 50px;" src="image/line.png" alt="">
+              <a href="#">Line</a>
+            </li>
+            <li>
+  
+      </div>
+    </div>
+    </div>
+  
+        <div class="footer-copyright py-3">
+          <p>©2020 Copyright by CPS Laboratory</p>
+        </div>
+  </footer>
+</body>
+</html>
