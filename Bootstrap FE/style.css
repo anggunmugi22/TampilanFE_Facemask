@@ -67,7 +67,6 @@
     background-size: cover;
     height: 800px;
     padding-top: 2cm;
-    
 }
 
 .form1 {
@@ -77,10 +76,11 @@
     display:block;
     text-align: center;
     height: 500px;
-    width: 500px;
+    width: 450px;
     border: 2px solid red; 
     border-radius: 10px;
     margin-left: 32%;
+	position: center;
     font-family: Comic sans MS;
     color: white;
     font-size: 15px;
@@ -88,8 +88,8 @@
 
 .form1 .md-form .file-field{
     font-size: 25px;
+	
 }
-
 /* css for video.html */
 .containervideo{
     background-image: url(image/mask4.jpeg);
@@ -99,6 +99,8 @@
     padding-bottom: 1cm;
     height: auto;
     width: auto;
+	background-size: cover;
+    height: 800px;
 }
 
 #h3{
